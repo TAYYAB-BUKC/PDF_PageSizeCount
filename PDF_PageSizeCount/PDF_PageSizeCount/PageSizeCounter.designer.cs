@@ -30,9 +30,11 @@
 		{
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
@@ -40,18 +42,20 @@
 			this.Filepath = new System.Windows.Forms.TextBox();
 			this.button5 = new System.Windows.Forms.Button();
 			this.Button_Choose = new System.Windows.Forms.Button();
+			this.Button_MultipleFiles = new System.Windows.Forms.Button();
 			this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Height = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.Grd_PageSizeCounter)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-			this.panel2.Location = new System.Drawing.Point(19, 460);
+			this.panel2.Location = new System.Drawing.Point(18, 530);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(777, 5);
+			this.panel2.Size = new System.Drawing.Size(796, 5);
 			this.panel2.TabIndex = 74;
 			// 
 			// label1
@@ -73,7 +77,7 @@
 			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
 			this.panel1.Location = new System.Drawing.Point(16, 64);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(778, 5);
+			this.panel1.Size = new System.Drawing.Size(797, 5);
 			this.panel1.TabIndex = 73;
 			// 
 			// Grd_PageSizeCounter
@@ -87,7 +91,7 @@
 			this.Grd_PageSizeCounter.BackgroundColor = System.Drawing.Color.Gainsboro;
 			this.Grd_PageSizeCounter.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.Grd_PageSizeCounter.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
 			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
 			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.MediumBlue;
@@ -99,16 +103,26 @@
 			this.Grd_PageSizeCounter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Count,
             this.Height,
-            this.Width});
+            this.Width,
+            this.FileName});
+			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+			dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.Grd_PageSizeCounter.DefaultCellStyle = dataGridViewCellStyle7;
 			this.Grd_PageSizeCounter.DoubleBuffered = true;
 			this.Grd_PageSizeCounter.EnableHeadersVisualStyles = false;
 			this.Grd_PageSizeCounter.HeaderBgColor = System.Drawing.SystemColors.Control;
 			this.Grd_PageSizeCounter.HeaderForeColor = System.Drawing.Color.MediumBlue;
-			this.Grd_PageSizeCounter.Location = new System.Drawing.Point(21, 122);
+			this.Grd_PageSizeCounter.Location = new System.Drawing.Point(20, 192);
 			this.Grd_PageSizeCounter.Name = "Grd_PageSizeCounter";
 			this.Grd_PageSizeCounter.ReadOnly = true;
 			this.Grd_PageSizeCounter.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			this.Grd_PageSizeCounter.Size = new System.Drawing.Size(775, 323);
+			this.Grd_PageSizeCounter.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+			this.Grd_PageSizeCounter.Size = new System.Drawing.Size(794, 323);
 			this.Grd_PageSizeCounter.TabIndex = 89;
 			// 
 			// Filepath
@@ -116,7 +130,7 @@
 			this.Filepath.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Filepath.Location = new System.Drawing.Point(181, 81);
 			this.Filepath.Name = "Filepath";
-			this.Filepath.Size = new System.Drawing.Size(615, 26);
+			this.Filepath.Size = new System.Drawing.Size(634, 26);
 			this.Filepath.TabIndex = 99;
 			// 
 			// button5
@@ -126,7 +140,7 @@
 			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button5.ForeColor = System.Drawing.Color.LightGray;
-			this.button5.Location = new System.Drawing.Point(778, 0);
+			this.button5.Location = new System.Drawing.Point(800, 1);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(25, 25);
 			this.button5.TabIndex = 100;
@@ -149,36 +163,68 @@
 			this.Button_Choose.UseVisualStyleBackColor = false;
 			this.Button_Choose.Click += new System.EventHandler(this.Button_Choose_Click);
 			// 
+			// Button_MultipleFiles
+			// 
+			this.Button_MultipleFiles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+			this.Button_MultipleFiles.FlatAppearance.BorderSize = 0;
+			this.Button_MultipleFiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Button_MultipleFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Button_MultipleFiles.ForeColor = System.Drawing.Color.LightGray;
+			this.Button_MultipleFiles.Location = new System.Drawing.Point(25, 122);
+			this.Button_MultipleFiles.Name = "Button_MultipleFiles";
+			this.Button_MultipleFiles.Size = new System.Drawing.Size(150, 60);
+			this.Button_MultipleFiles.TabIndex = 102;
+			this.Button_MultipleFiles.Text = "Choose Multiple PDFs";
+			this.Button_MultipleFiles.UseVisualStyleBackColor = false;
+			this.Button_MultipleFiles.Click += new System.EventHandler(this.Button_MultipleFiles_Click);
+			// 
 			// Count
 			// 
+			this.Count.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
 			this.Count.DefaultCellStyle = dataGridViewCellStyle3;
+			this.Count.FillWeight = 78.71768F;
 			this.Count.HeaderText = "Count";
 			this.Count.Name = "Count";
 			this.Count.ReadOnly = true;
 			// 
 			// Height
 			// 
+			this.Height.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
 			this.Height.DefaultCellStyle = dataGridViewCellStyle4;
+			this.Height.FillWeight = 66.46481F;
 			this.Height.HeaderText = "Height";
 			this.Height.Name = "Height";
 			this.Height.ReadOnly = true;
 			// 
 			// Width
 			// 
+			this.Width.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
 			this.Width.DefaultCellStyle = dataGridViewCellStyle5;
+			this.Width.FillWeight = 51.77182F;
 			this.Width.HeaderText = "Width";
 			this.Width.Name = "Width";
 			this.Width.ReadOnly = true;
+			// 
+			// FileName
+			// 
+			this.FileName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+			this.FileName.DefaultCellStyle = dataGridViewCellStyle6;
+			this.FileName.FillWeight = 203.0457F;
+			this.FileName.HeaderText = "FileName";
+			this.FileName.Name = "FileName";
+			this.FileName.ReadOnly = true;
 			// 
 			// PageSizeCounter
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.AutoScroll = true;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-			this.ClientSize = new System.Drawing.Size(810, 491);
+			this.ClientSize = new System.Drawing.Size(827, 554);
+			this.Controls.Add(this.Button_MultipleFiles);
 			this.Controls.Add(this.Button_Choose);
 			this.Controls.Add(this.button5);
 			this.Controls.Add(this.Filepath);
@@ -206,8 +252,10 @@
 		private System.Windows.Forms.TextBox Filepath;
 		private System.Windows.Forms.Button button5;
 		private System.Windows.Forms.Button Button_Choose;
+		private System.Windows.Forms.Button Button_MultipleFiles;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Count;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Height;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Width;
+		private System.Windows.Forms.DataGridViewTextBoxColumn FileName;
 	}
 }
